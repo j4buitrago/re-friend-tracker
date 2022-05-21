@@ -131,6 +131,32 @@ export class GuiModel {
                     ]
                 },
                 {
+                    "id": "activity",
+                    "title": "Activity",
+                    "url": "/activity",
+                    "formFieldList": [
+                    {
+                    "id": "name",
+                    "type": "text",
+                    "name": "Activity",
+                    "width": 2,
+                    "required": true
+                    },
+                    {
+                    "type": "deleteButton",
+                    "name": "Delete"
+                    },
+                    {
+                    "type": "cancelButton",
+                    "name": "Cancel"
+                    },
+                    {
+                    "type": "okButton",
+                    "name": "Ok"
+                    }
+                    ]
+                },
+                {
                     "id": "AddActivityForm",
                     "title": "Activity",
                     "url": "/friend/:friendKey/activity",
@@ -186,6 +212,14 @@ export class GuiModel {
                             "color": "wisteria",
                             "page": "groupspage",
                         },
+                        {
+                            "type": "button",
+                            "name": "Activities",
+                            "icon": "calendar-days",
+                            "color": "red",
+                            "page": "activitiespage",
+                        },
+
                     ]
                 },
                 {
@@ -209,9 +243,7 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/friend",
-                            "form": {
-                                "form": "FriendForm"
-                            }
+                            "page": "friendsactivitiespage",
                         },
                     ]
                 },
@@ -266,6 +298,69 @@ export class GuiModel {
                             "url": "/group",
                             "form": {
                                 "form": "GroupForm"
+                            }
+                        },
+                    ]
+                },
+                {
+                    "id": "activitiespage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "NewActivity",
+                            "icon": "calendar",
+                            "color": "green",
+                            "form": {
+                                "form": "activity"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "calendar",
+                            "color": "red",
+                            "search": true,
+                            "url": "/activity",
+                            "form": {
+                                "form": "activity"
+                            }
+                        },
+                    ]
+                },
+                {
+                    "id": "friendsactivitiespage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "EditFriend",
+                            "icon": "calendar",
+                            "color": "green",
+                            "form": {
+                                "form": "activity"
+                            }
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "AddActivity",
+                            "icon": "calendar",
+                            "color": "green",
+                            "form": {
+                                "form": "activity"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "calendar",
+                            "color": "orange",
+                            "search": true,
+                            "url": "/activity",
+                            "form": {
+                                "form": "activity"
                             }
                         },
                     ]
