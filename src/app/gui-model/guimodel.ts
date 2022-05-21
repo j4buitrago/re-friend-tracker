@@ -153,7 +153,7 @@ export class GuiModel {
                     ]
                 },
                 {
-                    "id": "activityForm",
+                    "id": "ActivityForm",
                     "title": "Activity",
                     "url": "/activity",
                     "formFieldList": [
@@ -212,7 +212,7 @@ export class GuiModel {
                             "url": "/activity",
                             "defaultKey": "activityKey",
                             "readonly": true,
-                            "form": "activityForm",
+                            "form": "ActivityForm",
                             "width": 2
                         },
                         {
@@ -281,14 +281,14 @@ export class GuiModel {
                         {
                             "type": "button",
                             "name": "Groups",
-                            "icon": "fa-weixin",
+                            "icon": "fa-users",
                             "color": "wisteria",
                             "page": "groupspage",
                         },
                         {
                             "type": "button",
                             "name": "Activities",
-                            "icon": "calendar-days",
+                            "icon": "fa-calendar",
                             "color": "red",
                             "page": "activitiespage",
                         },
@@ -304,7 +304,7 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": "NewFriend",
-                            "icon": "fa-user",
+                            "icon": "fa-user-plus",
                             "color": "green",
                             "form": {
                                 "form": "FriendForm"
@@ -329,7 +329,7 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": "NewLocation",
-                            "icon": "fa-home",
+                            "icon": "fa-plus-circle",
                             "color": "green",
                             "width": 2,
                             "form": {
@@ -342,9 +342,7 @@ export class GuiModel {
                             "color": "blue",
                             "search": true,
                             "url": "/location",
-                            "form": {
-                                "form": "LocationForm"
-                            }
+                            "page": "locationsactivitiespage"
                         },
                     ]
                 },
@@ -357,7 +355,7 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": "NewGroup",
-                            "icon": "fa-weixin",
+                            "icon": "fa-plus-circle",
                             "color": "green",
                             "form": {
                                 "form": "GroupForm"
@@ -365,7 +363,7 @@ export class GuiModel {
                         },
                         {
                             "type": "list",
-                            "icon": "fa-weixin",
+                            "icon": "fa-users",
                             "color": "wisteria",
                             "search": true,
                             "url": "/group",
@@ -384,15 +382,15 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": "NewActivity",
-                            "icon": "calendar",
+                            "icon": "fa-plus-circle",
                             "color": "green",
                             "form": {
-                                "form": "activityForm"
+                                "form": "ActivityForm"
                             }
                         },
                         {
                             "type": "list",
-                            "icon": "calendar",
+                            "icon": "fa-calendar",
                             "color": "red",
                             "search": true,
                             "url": "/activity",
@@ -409,7 +407,7 @@ export class GuiModel {
                         {
                             "type": "button",
                             "name": "EditFriend",
-                            "icon": "calendar",
+                            "icon": "fa-pencil-square-o",
                             "color": "green",
                             "form": {
                                 "form": "FriendForm"
@@ -418,7 +416,7 @@ export class GuiModel {
                         {
                             "type": "newButton",
                             "name": "AddActivity",
-                            "icon": "calendar",
+                            "icon": "fa-plus-circle",
                             "color": "green",
                             "form": {
                                 "form": "AddActivityForm"
@@ -426,12 +424,12 @@ export class GuiModel {
                         },
                         {
                             "type": "list",
-                            "icon": "calendar",
-                            "color": "orange",
+                            "icon": "fa-calendar",
+                            "color": "red",
                             "search": true,
                             "url": "/activity",
                             "form": {
-                                "form": "activityForm"
+                                "form": "ActivityForm"
                             }
                         },
                     ]
@@ -445,16 +443,16 @@ export class GuiModel {
                         {
                             "type": "button",
                             "name": "EditActivity",
-                            "icon": "calendar",
+                            "icon": "fa-pencil-square-o",
                             "color": "green",
                             "form": {
-                                "form": "LocationForm"
+                                "form": "ActivityForm"
                             }
                         },
                         {
                             "type": "newButton",
                             "name": "AddFriend",
-                            "icon": "fa-user",
+                            "icon": "fa-plus-circle",
                             "color": "green",
                             "form": {
                                 "form": "AddFriendForm"
@@ -462,12 +460,48 @@ export class GuiModel {
                         },
                         {
                             "type": "list",
-                            "icon": "calendar",
+                            "icon": "fa-address-card-o",
                             "color": "orange",
                             "search": true,
                             "url": "/friend",
                             "form": {
                                 "form": "FriendForm"
+                            }
+                        },
+                    ]
+                },
+                {
+                    "id": "locationsactivitiespage",
+                    "elementList": [
+                        {
+                            "type": "backbutton",
+                        },
+                        {
+                            "type": "button",
+                            "name": "EditLocation",
+                            "icon": "fa-pencil-square-o",
+                            "color": "green",
+                            "form": {
+                                "form": "LocationForm"
+                            }
+                        },
+                        {
+                            "type": "newButton",
+                            "name": "AddActivity",
+                            "icon": "fa-plus-circle",
+                            "color": "green",
+                            "form": {
+                                "form": "AddActivityForm"
+                            }
+                        },
+                        {
+                            "type": "list",
+                            "icon": "fa-calendar",
+                            "color": "red",
+                            "search": true,
+                            "url": "/activity",
+                            "form": {
+                                "form": "ActivityForm"
                             }
                         },
                     ]
